@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+    font-family: 'NOIR et BLANC';
+    src:
+        url('/assets/fonts/NOIRetBLANC_medium.woff2') format('woff2'),
+        url('/assets/fonts/NOIRetBLANC_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'NOIR et BLANC';
+    src:
+        url('/assets/fonts/NOIRetBLANC_medium_italic.woff2') format('woff2'),
+        url('/assets/fonts/NOIRetBLANC_medium_italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-*: initial;
+    --font-crimson-pro: 'Crimson Pro', serif;
+    --font-noir-et-blanc: 'NOIR et BLANC';
+
+    --color-*: initial;
+    --color-primary: #c88c00;
+    --color-black: #12232e;
+    --color-black-dark: #000000;
+    --color-white: #ffffff;
+    --color-background: #fdf4e4;
+    --color-background-dark: #ede4cf;
+    --color-gray: #635756;
+    --color-gray-100: #c6c2be;
+
+    --breakpoint-2xl: 98rem;
+
+    --text-22px: 22px;
+    --text-22px--line-height: 36px;
+    --text-70px: 70px;
+    --text-70px--line-height: 121px;
+
+    --tracking-px: 0.64px;
+}
+@custom-variant hover (&:hover);
+
+@layer base {
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+    body {
+        @apply bg-background text-gray font-crimson-pro flex min-h-screen flex-col text-lg/6.5 font-normal antialiased lg:text-2xl/8.5;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+@utility btn {
+    @apply tracking-px relative inline-flex shrink-0 items-center justify-center gap-2.5 overflow-hidden p-3 text-lg/4 font-medium whitespace-nowrap duration-300 after:absolute after:inset-0 after:h-0 after:w-full after:duration-300 hover:after:h-full lg:p-5 lg:text-xl/3;
+
+    &.btn-gray {
+        @apply border-gray text-gray border hover:after:bg-gray-100/20;
+    }
+    &.btn-primary {
+        @apply border-primary bg-primary border text-white hover:after:bg-white/20;
+    }
+}
+@utility btn-primary {
+    @apply border-primary bg-primary tracking-px relative inline-flex items-center justify-center gap-2.5 overflow-hidden border p-3 text-lg/4 font-medium text-white duration-300 after:absolute after:inset-0 after:h-0 after:w-full after:duration-300 hover:after:h-full hover:after:bg-white/20 lg:p-5 lg:text-xl/3;
+}
+
+@utility form-input {
+    @apply lg:placeholder:text-22px/6 focus:border-primary lg:text-22px/6 placeholder:text-gray/70 w-full border border-gray-100 bg-transparent px-3.5 py-2.5 text-xl/5 placeholder:text-xl/5 placeholder:font-normal focus-visible:ring-0 focus-visible:outline-0 lg:px-5 lg:py-3.5;
+}
+.form-textarea {
+    @apply lg:placeholder:text-22px/6 focus:border-primary lg:text-22px/6 placeholder:text-gray/70 block w-full resize-none border border-gray-100 bg-transparent px-3.5 py-2.5 text-xl/5 placeholder:text-xl/5 placeholder:font-normal focus-visible:ring-0 focus-visible:outline-0 lg:px-5 lg:py-3.5;
+}
+@layer components {
+    .header-link {
+        @apply after:bg-primary relative inline-flex whitespace-nowrap after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:duration-300 hover:after:w-5;
+
+        &.active {
+            @apply after:w-5;
+        }
+    }
+    .nav-link {
+        @apply font-noir-et-blanc after:bg-primary relative inline-flex text-2xl font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:duration-300 hover:after:w-10 md:font-normal lg:text-4xl/16 xl:text-6xl/25;
+        &.active {
+            @apply after:w-10;
+        }
+    }
+
+    .footer-link {
+        @apply xl:text-22px/6 hover:text-background inline-flex text-lg/5 font-light text-gray-100 transition sm:text-xl/5;
+    }
+    .section-heading h2 {
+        @apply font-noir-et-blanc text-3xl/12 tracking-[.65px] text-black lg:text-[40px]/17;
+    }
+    .section-heading p {
+        @apply text-gray mt-2.5 text-lg/6 sm:text-xl/7 lg:text-2xl/8.5;
+    }
+
+    .room-details-tab .detail-link {
+        @apply after:bg-primary sm:text-22px/6 relative inline-flex pb-3.5 text-lg/5.5 whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:duration-300 hover:text-black hover:after:w-5 lg:text-2xl/7;
+
+        &.active {
+            @apply text-black after:w-5;
+        }
+    }
+}
+
+@utility prose {
+    @apply text-gray max-w-full! text-left;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-noir-et-blanc mt-8 mb-2.5 font-medium text-black;
+    }
+    p {
+        @apply text-gray mt-0 mb-4 text-lg/6 sm:text-xl/7 lg:text-2xl/8.5;
+    }
+
+    h3 {
+        @apply mb-4 text-2xl/10 lg:text-3xl/12;
+    }
+    h2 {
+        @apply mt-8 text-3xl/12 tracking-[.65px] text-black sm:mt-10 xl:mt-14 xl:text-[40px]/17;
+    }
+    ul {
+        @apply mt-4;
+    }
+    ul > li {
+        @apply text-gray marker:text-gray mt-0 mb-0 ps-0 text-lg/6 font-normal marker:text-xl/6! sm:text-xl/7 lg:text-2xl/8.5;
+    }
+    a {
+        @apply text-primary inline-block no-underline underline-offset-3 transition hover:underline lg:text-lg/6.5;
+    }
+    ol {
+        @apply list-none ps-0;
+    }
+    ol > li {
+        @apply mt-0 pl-0!;
+    }
+    blockquote {
+        @apply border-primary bg-background-dark text-gray my-8 border-l-8 p-6 text-lg/6 font-medium italic sm:text-xl/7 lg:my-14 lg:p-8 lg:text-2xl/8.5;
+    }
+    img {
+        @apply my-8 h-75 w-auto object-cover lg:my-14 lg:h-100;
+    }
+}
+
+.partner-swiper .swiper-slide {
+    @apply sm:opacity-40;
+}
+.partner-swiper .swiper-slide:where(.swiper-slide-prev, .swiper-slide-next) {
+    @apply sm:opacity-60;
+}
+.partner-swiper .swiper-slide.swiper-slide-active {
+    @apply opacity-100;
+}
+
+.event-thumbs-swiper .swiper-slide {
+    @apply opacity-60!;
+}
+.event-thumbs-swiper .swiper-slide-thumb-active {
+    @apply opacity-100!;
+}
+
+/* Flatpickr */
+.flatpickr-calendar {
+    @apply bg-background-dark! border-primary/20! rounded-none! border!;
+}
+.flatpickr-wrapper {
+    @apply h-full w-full;
+}
+.flatpickr-day {
+    @apply hover:bg-background! hover:border-background! grid! h-9! place-content-center! rounded-none! text-base leading-none! font-medium;
+}
+.flatpickr-day.selected {
+    @apply border-primary! bg-primary! text-white!;
+}
+.flatpickr-day.today {
+    @apply text-black;
+}
+.flatpickr-day.today:hover,
+.flatpickr-day.today:focus {
+    @apply bg-background text-black hover:text-black;
+}
+.flatpickr-weekday {
+    @apply text-sm! font-bold!;
+}
+.flatpickr-calendar .numInputWrapper span {
+    @apply hidden;
+}
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    @apply [&_svg]:fill-primary! hover:[&_svg]:text-primary! [&_svg]:size-4! [&_svg]:stroke-3;
+}
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+    @apply fill-black!;
+}
+.flatpickr-calendar:after,
+.flatpickr-calendar:before {
+    @apply hidden!;
+}
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    @apply hover:bg-background/70;
+}
+
+.room-content [id] {
+    scroll-margin-top: 170px;
+}
+
+.my-booking-table thead th,
+.my-booking-table tbody td {
+    @apply border-b border-gray-100 px-4 py-5 text-left text-lg/6 font-medium first:pl-5 last:pr-5 lg:py-7.5 lg:text-xl/8 lg:first:pl-7.5 lg:last:pr-7.5;
+}
+.my-booking-table tbody td {
+    @apply lg:text-22px/6 border-b border-gray-100 px-4 py-5 text-left text-xl/6 font-normal first:pl-5 last:pr-5 lg:py-7.5 lg:first:pl-7.5 lg:last:pr-7.5;
+}
+.my-booking-table tbody tr:last-child td {
+    @apply border-b-0;
+}
