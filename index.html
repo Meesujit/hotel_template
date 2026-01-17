@@ -1,1657 +1,1239 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home | RoyalSuites</title>
-        <meta
-            name="description"
-            content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Home | RoyalSuites" />
-        <meta
-            property="og:description"
-            content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey."
-        />
-        <meta
-            property="og:url"
-            content="https://royal-suites-html.vercel.app/"
-        />
-        <meta
-            property="og:image"
-            content="https://royal-suites-html.vercel.app/assets/images/logo.png"
-        />
-        <!-- Twitter Card Tags -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content="@RoyalSuites" />
-        <meta property="twitter:title" content="Home | RoyalSuites" />
-        <meta
-            property="twitter:description"
-            content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey."
-        />
-        <meta
-            property="twitter:image"
-            content="https://royal-suites-html.vercel.app/assets/images/logo.png"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://royal-suites-html.vercel.app/" />
-        <link rel="icon" type="icon" href="assets/images/favicon.png" />
 
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/photoswipe.css" />
-    </head>
-    <body x-data="mainContent()">
-        <div
-            class="relative"
-            x-data="{ isLoading: true }"
-            x-init="setTimeout(() => {isLoading = false }, 2000)"
-        >
-            <div
-                class="relative"
-                x-data="{ isLoading: true }"
-                x-init="setTimeout(() => {isLoading = false }, 2000)"
-            >
-                <div
-                    id="preloader"
-                    x-show="isLoading"
-                    class="bg-background fixed inset-0 z-60 flex h-screen w-full"
-                >
-                    <img
-                        src="assets/images/loader.gif"
-                        alt="loading"
-                        loading="lazy"
-                        width="200"
-                        height="200"
-                        class="absolute top-1/2 left-1/2 h-auto w-16 -translate-x-1/2 -translate-y-1/2"
-                    />
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | RoyalSuites</title>
+    <meta name="description"
+        content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home | RoyalSuites" />
+    <meta property="og:description"
+        content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey." />
+    <meta property="og:url" content="https://royal-suites-html.vercel.app/" />
+    <meta property="og:image"
+        content="https://royal-suites-html.vercel.app/assets/images/logo.png" />
+    <!-- Twitter Card Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@RoyalSuites" />
+    <meta property="twitter:title" content="Home | RoyalSuites" />
+    <meta property="twitter:description"
+        content="Book world-class stays with seamless comfort, curated elegance, and unforgettable moments—discover premium hotels designed to elevate every journey." />
+    <meta property="twitter:image"
+        content="https://royal-suites-html.vercel.app/assets/images/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://royal-suites-html.vercel.app/" />
+    <link rel="icon" type="icon" href="assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/photoswipe.css" />
+</head>
+
+<body x-data="mainContent()">
+    <div class="relative" x-data="{ isLoading: true }"
+        x-init="setTimeout(() => {isLoading = false }, 2000)">
+        <div class="relative" x-data="{ isLoading: true }"
+            x-init="setTimeout(() => {isLoading = false }, 2000)">
+            <div id="preloader" x-show="isLoading"
+                class="bg-background fixed inset-0 z-60 flex h-screen w-full">
+                <img src="assets/images/loader.gif" alt="loading" loading="lazy"
+                    width="200" height="200"
+                    class="absolute top-1/2 left-1/2 h-auto w-16 -translate-x-1/2 -translate-y-1/2" />
             </div>
         </div>
-        <header
-            class="bg-background sticky top-0 z-50 border-b border-[#73635F]/10 py-5 lg:py-5.5"
-            x-effect="document.body.classList.toggle('overflow-hidden', headerMenu)"
-        >
-            <div class="container">
-                <div class="flex items-center gap-4">
-                    <div
-                        class="hidden items-center justify-start gap-7.5 text-xl/6 font-medium lg:flex lg:w-1/3"
-                    >
-                        <a href="/" class="header-link active">Home</a>
-                        <a href="/rooms.html" class="header-link">Rooms</a>
-                        <a href="/dining.html" class="header-link">Dining</a>
-                        <a href="/services.html" class="header-link">
-                            Services
-                        </a>
-                    </div>
-                    <div class="flex lg:mx-auto lg:w-1/3">
-                        <a href="/" class="mx-auto inline-flex">
-                            <img
-                                src="assets/images/logo.svg"
-                                alt="RoyalSuites"
-                                class="mx-auto h-7 w-auto sm:h-10 xl:h-13.5"
-                            />
-                        </a>
-                    </div>
-                    <div class="ml-auto flex justify-end lg:w-1/3">
-                        <div
-                            class="inline-flex items-center gap-2.5 p-2 text-base/4 font-medium text-black ring-1 ring-[#41312D]/10 sm:gap-4 sm:px-4 sm:py-3 sm:text-xl/4"
-                        >
-                            <a
-                                href="/booking.html"
-                                class="duration-300 hover:opacity-80"
-                            >
-                                Book Now
-                            </a>
-                            <span
-                                class="bg-primary block h-4 w-px shrink-0 translate-y-px rounded"
-                            ></span>
-                            <button
-                                type="button"
-                                class="group flex items-center gap-0.5 duration-300 hover:opacity-80 sm:gap-4"
-                                @click="headerMenu = !headerMenu"
-                            >
-                                Menu
-                                <span
-                                    class="flex size-5 translate-y-px flex-col justify-center gap-1 px-1 duration-300 group-hover:rotate-y-180 sm:size-7.5 sm:gap-2"
-                                >
-                                    <span
-                                        class="h-0.5 w-full rounded bg-black"
-                                    ></span>
-                                    <span
-                                        class="h-0.5 w-full rounded bg-black"
-                                    ></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <header
+        class="bg-background sticky top-0 z-50 border-b border-[#73635F]/10 py-5 lg:py-5.5"
+        x-effect="document.body.classList.toggle('overflow-hidden', headerMenu)">
+        <div class="container">
+            <div class="flex items-center gap-4">
                 <div
-                    class="fixed inset-x-0 -top-full z-50 h-0 w-full overflow-x-hidden overflow-y-auto bg-white transition-all duration-500"
-                    :class="{ 'top-0 h-dvh': headerMenu }"
-                >
-                    <div class="relative z-1 overflow-y-auto">
-                        <img
-                            src="assets/images/cloud.png"
-                            alt="bg menu"
-                            class="absolute top-0 left-0 h-40 w-auto lg:h-auto"
-                        />
-                        <img
-                            src="assets/images/submenu-banner.png"
-                            alt="bg menu"
-                            class="fixed right-0 -bottom-full h-10 w-auto duration-700 ease-in-out sm:h-30 2xl:h-45"
-                            :class="{ 'bottom-0': headerMenu }"
-                            x-transition.delay.300ms
-                        />
-                        <img
-                            src="assets/images/menu-bg.jpg"
-                            alt="bg menu"
-                            class="fixed inset-0 -top-full -z-1 h-full w-full object-cover opacity-15 transition-all duration-500"
-                            :class="{ 'top-0': headerMenu }"
-                            x-transition.delay.300ms
-                        />
-                        <div
-                            class="relative z-2 flex h-full w-full flex-wrap items-start gap-10 px-5 py-16 sm:px-8 md:flex-nowrap md:gap-40 lg:px-20 xl:pt-30 xl:pb-44 2xl:gap-89 2xl:px-60"
-                        >
-                            <div
-                                class="grid w-full grid-cols-2 gap-4 md:w-auto md:grid-cols-1"
-                            >
-                                <ul class="shrink-0 space-y-4 lg:hidden">
-                                    <li>
-                                        <a href="/" class="nav-link">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="/rooms.html" class="nav-link">
-                                            Rooms
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/dining.html" class="nav-link">
-                                            Dining
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/services.html"
-                                            class="nav-link"
-                                        >
-                                            Services
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="shrink-0 space-y-4">
-                                    <li>
-                                        <a href="/events.html" class="nav-link">
-                                            Events
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/about-us.html"
-                                            class="nav-link"
-                                        >
-                                            About us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/contact-us.html"
-                                            class="nav-link"
-                                        >
-                                            Contact
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/gallery.html"
-                                            class="nav-link"
-                                        >
-                                            Gallery
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/blogs.html" class="nav-link">
-                                            Blog
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div
-                                class="relative z-1 w-full space-y-6 md:w-auto xl:space-y-10"
-                            >
-                                <ul class="space-y-2.5">
-                                    <li
-                                        class="bg-primary h-0.5 w-5 rounded"
-                                    ></li>
-                                    <li>
-                                        <a
-                                            href="/faqs.html"
-                                            class="text-gray font-crimson-pro inline-flex text-2xl -tracking-[2%] transition hover:text-black xl:text-3xl/10"
-                                        >
-                                            FAQs
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/my-booking.html"
-                                            class="text-gray font-crimson-pro inline-flex text-2xl -tracking-[2%] transition hover:text-black xl:text-3xl/10"
-                                        >
-                                            My bookings
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="space-y-2.5">
-                                    <span
-                                        class="bg-primary block h-0.5 w-5 rounded"
-                                    ></span>
-                                    <div class="text-xl/5.5">
-                                        Stay Connected
-                                    </div>
-                                    <a
-                                        href="mailto:info@royalsuites.com"
-                                        class="block w-fit text-2xl text-black transition hover:opacity-70 xl:text-3xl/8"
-                                        >info@royalsuites.com</a
-                                    >
-                                    <a
-                                        href="tel:+15179941643"
-                                        class="block w-fit text-2xl text-black transition hover:opacity-70 xl:text-3xl/8"
-                                        >+1 517-994-1643</a
-                                    >
-                                </div>
-                                <div class="space-y-2.5">
-                                    <span
-                                        class="bg-primary block h-0.5 w-5 rounded"
-                                    ></span>
-                                    <div class="text-xl/5.5">Social Media</div>
-                                    <div
-                                        class="flex flex-wrap items-center gap-2.5"
-                                    >
-                                        <a
-                                            href="https://instagram.com"
-                                            target="_blank"
-                                            class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8"
-                                        >
-                                            Instagram
-                                        </a>
-                                        <span
-                                            class="block h-4.5 w-0.5 shrink-0 rounded bg-black/30"
-                                        ></span>
-                                        <a
-                                            href="https://facebook.com"
-                                            target="_blank"
-                                            class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8"
-                                        >
-                                            Facebook
-                                        </a>
-                                        <span
-                                            class="block h-4.5 w-0.5 shrink-0 rounded bg-black/30"
-                                        ></span>
-                                        <a
-                                            href="https://linkedin.com"
-                                            target="_blank"
-                                            class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8"
-                                        >
-                                            LinkedIn
-                                        </a>
-                                    </div>
-                                </div>
-                                <div
-                                    id="gallery"
-                                    class="flex flex-wrap gap-2.5"
-                                    x-data="headerGallery()"
-                                >
-                                    <template
-                                        x-for="(item, index) in images"
-                                        :key="index"
-                                    >
-                                        <a
-                                            :href="item.image"
-                                            class="group relative block size-20 overflow-hidden lg:size-30"
-                                            :data-pswp-width="item.width"
-                                            :data-pswp-height="item.height"
-                                            target="_blank"
-                                        >
-                                            <img
-                                                :src="item.image"
-                                                alt="Gallery image"
-                                                class="h-full w-full object-cover transition-transform"
-                                            />
-                                            <div
-                                                class="absolute inset-0 z-1 grid place-content-center bg-black/50 opacity-0 transition group-hover:opacity-100"
-                                            >
-                                                <button
-                                                    type="button"
-                                                    class="text-white hover:scale-105"
-                                                >
-                                                    <i
-                                                        data-lucide="eye"
-                                                        class="size-4.5 shrink-0 duration-300"
-                                                    ></i>
-                                                </button>
-                                            </div>
-                                        </a>
-                                    </template>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button
-                        type="button"
-                        class="absolute top-5 right-5 z-10 bg-white duration-300 hover:rotate-y-180 md:top-9 md:right-9 xl:right-52"
-                        @click="headerMenu = !headerMenu"
-                    >
-                        <i
-                            data-lucide="x"
-                            class="size-5.5 shrink-0 sm:size-7.5"
-                        ></i>
-                        <span class="sr-only">Close menu</span>
-                    </button>
-                </div>
-            </div>
-        </header>
-        <div class="grow">
-            <div class="relative z-1 flex h-[calc(100vh-99px)] overflow-hidden">
-                <img
-                    src="assets/images/home-banner.jpg"
-                    alt="Home banner"
-                    class="absolute inset-0 -z-1 size-full object-cover"
-                />
-                <span
-                    class="absolute inset-0 -z-1 bg-gradient-to-t from-[#2B1C06] to-[#2B1C06]/25 lg:to-transparent"
-                ></span>
-                <div
-                    class="relative container flex h-full flex-col items-center justify-center gap-5 py-20 text-center"
-                >
-                    <h1
-                        class="font-noir-et-blanc text-4xl/14 text-white sm:text-5xl lg:text-[70px]/30"
-                    >
-                        Experience Luxury, <span class="italic">Redefined</span>
-                    </h1>
-                    <p
-                        class="text-background sm:text-22px mx-auto max-w-178 text-lg/5 lg:text-[26px]/9"
-                    >
-                        Book world-class stays with seamless comfort, curated
-                        elegance, and unforgettable moments.
-                    </p>
-                    <a
-                        href="/rooms.html"
-                        class="hover:bg-background/10 mt-2.5 inline-flex items-center justify-center border border-white p-4 text-lg/3 text-white duration-300 sm:p-5 sm:text-xl/3"
-                    >
-                        Explore Suits
+                    class="hidden items-center justify-start gap-7.5 text-xl/6 font-medium lg:flex lg:w-1/3">
+                    <a href="index.html" class="header-link active">Home</a>
+                    <a href="rooms.html" class="header-link">Rooms</a>
+                    <a href="dining.html" class="header-link">Dining</a>
+                    <a href="services.html" class="header-link">
+                        Services
                     </a>
                 </div>
-            </div>
-
-            <div class="container space-y-10 py-16 lg:space-y-14 lg:py-20">
-                <div class="section-heading text-center">
-                    <h2>Our Valued Partners</h2>
+                <div class="flex lg:mx-auto lg:w-1/3">
+                    <a href="index.html" class="mx-auto inline-flex">
+                        <img src="assets/images/logo.svg" alt="RoyalSuites"
+                            class="mx-auto h-7 w-auto sm:h-10 xl:h-13.5" />
+                    </a>
                 </div>
-                <div
-                    class="partner-swiper swiper"
-                    x-data="partnerData()"
-                    x-init="initSwipers()"
-                >
-                    <div class="swiper-wrapper">
-                        <template x-for="(item, index) in partners">
-                            <div class="swiper-slide" key="item.id">
-                                <img
-                                    :src="item.image"
-                                    alt="partner-swiper-1"
-                                    class="mx-auto h-7 w-auto"
-                                />
-                            </div>
-                        </template>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-background-dark overflow-hidden py-16 lg:py-20">
-                <div class="container space-y-8 sm:space-y-14">
+                <div class="ml-auto flex justify-end lg:w-1/3">
                     <div
-                        class="flex flex-wrap items-end gap-5 sm:flex-nowrap sm:items-center sm:gap-10"
-                    >
-                        <div class="section-heading max-w-124">
-                            <h2>Rooms & Suites</h2>
-                            <p>
-                                Experience comfort redefined with timeless
-                                luxury, serenity, and personalized care.
-                            </p>
-                        </div>
-                        <div class="ml-auto flex gap-2.5 sm:gap-4">
-                            <button
-                                type="button"
-                                class="rooms-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                            >
-                                <i
-                                    data-lucide="arrow-left"
-                                    class="size-5 shrink-0 text-black sm:size-6"
-                                ></i>
-                            </button>
-                            <button
-                                type="button"
-                                class="rooms-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                            >
-                                <i
-                                    data-lucide="arrow-right"
-                                    class="size-5 shrink-0 text-black sm:size-6"
-                                ></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="rooms-swiper swiper overflow-visible!"
-                        x-data="roomsData()"
-                        x-init="initSwipers()"
-                    >
-                        <div class="swiper-wrapper">
-                            <template x-for="(item, index) in rooms">
-                                <div class="swiper-slide" key="item.id">
-                                    <div class="group relative">
-                                        <a
-                                            href="/room-details.html"
-                                            class="absolute inset-0 z-1"
-                                        ></a>
-                                        <div
-                                            class="relative block aspect-[626/500] overflow-hidden"
-                                        >
-                                            <img
-                                                :src="item.image"
-                                                alt="Room image"
-                                                class="size-full object-cover duration-300 group-hover:scale-105"
-                                            />
-                                            <span
-                                                class="absolute inset-0 top-auto h-1/2 bg-gradient-to-t from-[#000]/80 opacity-0 transition-all duration-300 group-hover:opacity-100"
-                                            ></span>
-                                            <div
-                                                class="border-primary divide-primary invisible absolute inset-x-0 bottom-0 grid grid-cols-2 divide-x border-t opacity-0 delay-100 duration-300 group-hover:visible group-hover:opacity-100"
-                                            >
-                                                <div
-                                                    class="sm:text-22px space-y-2.5 p-2.5 text-center text-lg font-medium text-white sm:p-4"
-                                                >
-                                                    <img
-                                                        src="assets/images/icon-breakfast.svg"
-                                                        alt="Breakfast icon"
-                                                        class="mx-auto h-10 w-auto"
-                                                    />
-                                                    <p>
-                                                        Breakfast
-                                                        <span
-                                                            x-text="item.breakfast"
-                                                        ></span>
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="sm:text-22px space-y-2.5 p-2.5 text-center text-lg font-medium text-white sm:p-4"
-                                                >
-                                                    <img
-                                                        src="assets/images/icon-users.svg"
-                                                        alt="Breakfast icon"
-                                                        class="mx-auto h-10 w-auto"
-                                                    />
-                                                    <p>
-                                                        <span
-                                                            x-text="item.adults"
-                                                        ></span>
-                                                        Adults
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="mt-3 flex items-center gap-2.5 lg:mt-5"
-                                        >
-                                            <div class="grow space-y-1.5">
-                                                <h3
-                                                    class="font-noir-et-blanc sm:text-22px/6.5 line-clamp-2 text-xl/6 break-words text-black lg:text-3xl/13"
-                                                    x-text="item.name"
-                                                ></h3>
-                                                <h4
-                                                    class="text-gray text-xl/6 lg:text-2xl/7"
-                                                >
-                                                    <span
-                                                        x-text="item.price"
-                                                    ></span>
-                                                    / Night
-                                                </h4>
-                                            </div>
-                                            <span
-                                                class="ml-auto duration-300 group-hover:rotate-45"
-                                            >
-                                                <i
-                                                    data-lucide="arrow-up-right"
-                                                    class="size-6 shrink-0 sm:size-7.5"
-                                                ></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-[#F6F3EC] py-16 lg:py-20">
-                <div class="container space-y-8 sm:space-y-14">
-                    <div
-                        class="flex flex-wrap items-end gap-5 sm:flex-nowrap sm:items-center sm:gap-10"
-                    >
-                        <div
-                            class="section-heading flex grow flex-col items-start xl:flex-row"
-                        >
-                            <h2 class="shrink-0">Facilities & Services</h2>
-                            <p class="max-w-183 xl:mt-0 xl:ml-auto">
-                                Experience world-class comforts, thoughtful
-                                amenities, and personalized services designed to
-                                make your stay truly unforgettable.
-                            </p>
-                        </div>
-                        <div class="ml-auto flex gap-2.5 sm:hidden sm:gap-4">
-                            <button
-                                type="button"
-                                class="facilities-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                            >
-                                <i
-                                    data-lucide="arrow-left"
-                                    class="size-5 shrink-0 text-black sm:size-6"
-                                ></i>
-                            </button>
-                            <button
-                                type="button"
-                                class="facilities-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                            >
-                                <i
-                                    data-lucide="arrow-right"
-                                    class="size-5 shrink-0 text-black sm:size-6"
-                                ></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="facilities-swiper swiper relative overflow-visible!"
-                        x-data="facilitiesData()"
-                        x-init="initSwipers()"
-                    >
-                        <div class="swiper-wrapper">
-                            <template x-for="(item, index) in facilities">
-                                <div class="swiper-slide" key="item.id">
-                                    <div class="group relative">
-                                        <a
-                                            href="/services.html"
-                                            class="absolute inset-0 z-1"
-                                        ></a>
-                                        <div
-                                            class="relative block h-100 overflow-hidden sm:aspect-[366/560] sm:h-auto"
-                                        >
-                                            <img
-                                                :src="item.image"
-                                                alt="Facilities image"
-                                                class="size-full scale-110 object-cover duration-300 group-hover:scale-100"
-                                            />
-                                            <span
-                                                class="absolute inset-0 top-auto h-1/2 bg-gradient-to-t from-[#000]/80 transition-all duration-300"
-                                            ></span>
-                                            <div
-                                                class="absolute inset-x-0 bottom-0 p-7.5 duration-300"
-                                            >
-                                                <h3
-                                                    class="text-22px font-medium text-white"
-                                                    x-text="item.title"
-                                                ></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="bg-background-dark relative z-1 overflow-hidden py-16 lg:py-20"
-            >
-                <span class="absolute right-0 bottom-0 -z-1">
-                    <img
-                        src="assets/images/palace.png"
-                        alt="Palace image"
-                        class="size-auto"
-                    />
-                    <span
-                        class="from-background-dark absolute inset-0 w-1/3 bg-gradient-to-r"
-                    ></span>
-                </span>
-                <div class="container space-y-10 sm:space-y-14">
-                    <div
-                        class="section-heading flex flex-col items-start xl:flex-row xl:gap-5"
-                    >
-                        <h2>Amenities That Define Luxury</h2>
-                        <p class="max-w-183 xl:mt-0 xl:ml-auto">
-                            Discover thoughtfully curated comforts and luxuries
-                            that blend relaxation, elegance, and modern
-                            convenience in perfect harmony.
-                        </p>
-                    </div>
-
-                    <div
-                        class="grid gap-5 sm:grid-cols-2 lg:gap-6 2xl:grid-cols-4"
-                        x-data="amenitiesData()"
-                    >
-                        <template x-for="(item, index) in amenities">
-                            <div
-                                class="group hover:ring-primary relative z-1 flex flex-col gap-5 overflow-hidden transition-all hover:ring-1 sm:gap-8 2xl:gap-14"
-                                key="item.id"
-                            >
-                                <span
-                                    class="absolute inset-0 transition-all duration-500 group-hover:bg-gradient-to-t group-hover:from-[#000]/80"
-                                ></span>
-                                <span
-                                    class="absolute inset-0 h-full bg-white transition-all duration-500 group-hover:h-0"
-                                ></span>
-                                <img
-                                    :src="item.background_image"
-                                    alt="Background image"
-                                    class="invisible absolute inset-0 -z-1 size-full scale-110 object-cover opacity-0 duration-500 group-hover:visible group-hover:scale-101 group-hover:opacity-100"
-                                />
-                                <img
-                                    :src="item.background_icon"
-                                    alt="Icon"
-                                    class="relative ml-auto size-20 duration-300 group-hover:opacity-0"
-                                />
-                                <div
-                                    class="relative mt-auto block grow p-5 duration-500 group-hover:text-white lg:p-7.5"
-                                >
-                                    <div class="relative size-15">
-                                        <img
-                                            :src="item.icon_primary"
-                                            alt="Amenities dark icon"
-                                            class="absolute inset-0 size-full object-contain opacity-100 transition duration-300 group-hover:opacity-0"
-                                        />
-                                        <img
-                                            :src="item.icon_light"
-                                            alt="Amenities light icon"
-                                            class="absolute inset-0 size-full object-contain opacity-0 transition duration-300 group-hover:opacity-100"
-                                        />
-                                    </div>
-                                    <h3
-                                        class="font-noir-et-blanc mt-6 text-2xl/8 font-medium text-black duration-500 group-hover:text-white sm:mt-7.5 sm:text-3xl/10 lg:text-[32px]/14"
-                                        x-text="item.title"
-                                    ></h3>
-                                    <p
-                                        class="mt-2.5 text-lg/6.5"
-                                        x-text="item.description"
-                                    ></p>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="bg-background grid gap-10 overflow-hidden pt-16 md:grid-cols-2 md:gap-0 md:pt-0"
-            >
-                <div
-                    class="section-heading relative flex flex-col justify-center px-4 text-center md:py-14 xl:p-20"
-                >
-                    <img
-                        src="assets/images/flower-shadow.png"
-                        alt="flower-shadow"
-                        class="absolute top-0 right-0 hidden w-1/2 md:block xl:w-auto"
-                    />
-                    <img
-                        src="assets/images/icon-flower.svg"
-                        alt="Flower icon"
-                        class="mx-auto mb-5 size-15"
-                    />
-                    <h2>Why Choose Us</h2>
-                    <p>
-                        At <span class="text-primary">RoyalSuites</span>, we
-                        bring you carefully handpicked luxury hotels that meet
-                        the highest standards, ranging from modern city stays to
-                        royal heritage palaces and serene beachfront resorts.
-                    </p>
-                </div>
-                <div class="h-100 overflow-hidden md:h-auto">
-                    <img
-                        src="assets/images/choose-img.jpg"
-                        alt="Choose image"
-                        class="size-full object-cover"
-                    />
-                </div>
-            </div>
-            <div
-                class="bg-background grid gap-10 overflow-hidden pt-16 md:grid-cols-2 md:gap-0 md:pt-0"
-            >
-                <div
-                    class="section-heading relative order-none flex flex-col justify-center px-4 text-center md:order-2 md:py-14 xl:p-20"
-                >
-                    <img
-                        src="assets/images/flower-shadow.png"
-                        alt="flower-shadow"
-                        class="absolute top-0 left-0 hidden w-1/2 rotate-y-180 md:block xl:w-auto"
-                    />
-                    <img
-                        src="assets/images/icon-flower.svg"
-                        alt="Flower icon"
-                        class="mx-auto mb-5 size-15"
-                    />
-                    <h2>About RoyalSuites</h2>
-                    <p>
-                        <span class="text-primary">RoyalSuites</span> is
-                        dedicated to providing luxury services that go beyond
-                        expectations. From refined comfort to personalized
-                        hospitality, we craft stays that feel effortless and
-                        unforgettable.
-                    </p>
-                </div>
-                <div
-                    class="order-none h-100 overflow-hidden md:order-1 md:h-auto"
-                >
-                    <img
-                        src="assets/images/about-img.jpg"
-                        alt="Choose image"
-                        class="size-full object-cover"
-                    />
-                </div>
-            </div>
-
-            <div class="bg-background-dark">
-                <div
-                    class="border-primary mx-4 border border-t-0 pt-14 pb-5 sm:py-14 xl:mx-14 xl:py-20"
-                >
-                    <div
-                        class="section-heading container flex flex-col items-start xl:flex-row xl:gap-5"
-                    >
-                        <h2>Beyond Stays, Into Memories</h2>
-                        <p class="max-w-150 xl:mt-0 xl:ml-auto">
-                            Hear how every thoughtful detail transforms each
-                            stay into an unforgettable, cherished experience of
-                            timeless luxury.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="testimonial-swiper swiper"
-                    x-data="testimonialData()"
-                    x-init="initSwipers()"
-                >
-                    <div class="swiper-wrapper">
-                        <template x-for="(item, index) in testimonials">
-                            <div class="swiper-slide">
-                                <div
-                                    class="relative flex flex-col-reverse lg:flex-row"
-                                >
-                                    <div
-                                        class="relative h-100 w-full sm:h-auto lg:absolute lg:bottom-0 lg:left-0 lg:max-w-225"
-                                    >
-                                        <img
-                                            src="assets/images/testimonial-bg.png"
-                                            alt="Testimonials image"
-                                            class="h-full w-full object-cover sm:h-auto lg:w-auto"
-                                        />
-                                        <span
-                                            class="from-background-dark via-background-dark absolute inset-x-0 top-0 left-0 h-1/2 w-full bg-gradient-to-b lg:inset-x-auto lg:inset-y-0 lg:size-1/4 lg:via-transparent"
-                                        ></span>
-                                    </div>
-                                    <div class="container">
-                                        <div
-                                            class="bg-background-dark relative pt-14 lg:ml-auto lg:w-[54%] lg:pb-34 lg:pl-7.5"
-                                        >
-                                            <span
-                                                class="from-background-dark via-background-dark/50 absolute inset-y-0 -left-1/3 hidden w-1/3 bg-gradient-to-l lg:block"
-                                            ></span>
-                                            <svg
-                                                width="40"
-                                                height="30"
-                                                viewBox="0 0 40 30"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                class="h-7.5"
-                                            >
-                                                <path
-                                                    d="M9.81191 0.000136124L15.0114 4.24935C15.342 4.51925 15.3507 5.02353 15.0429 5.32009C14.1282 6.19728 13.0841 7.35326 12.0924 8.82703C11.1427 10.2405 10.4781 11.59 10.0112 12.7389C9.83106 13.1828 10.1634 13.6569 10.6391 13.6569H16.3109C16.6922 13.6569 17 13.9676 17 14.3511V29.3075C17 29.6893 16.6922 30 16.3109 30H1.10733C0.766283 30 0.475939 29.7496 0.430495 29.4087C-0.27083 24.0393 -1.16105 10.9185 7.08869 2.38296C7.88095 1.56437 8.78177 0.761909 9.81191 0.000136124Z"
-                                                    fill="#C88C00"
-                                                />
-                                                <path
-                                                    d="M32.8119 0.000136124L38.0114 4.24935C38.342 4.51925 38.3507 5.02353 38.0429 5.32009C37.1282 6.19728 36.0841 7.35326 35.0924 8.82703C34.1427 10.2405 33.4781 11.59 33.0112 12.7389C32.8311 13.1828 33.1634 13.6569 33.6391 13.6569H39.3109C39.6922 13.6569 40 13.9676 40 14.3511V29.3075C40 29.6893 39.6922 30 39.3109 30H24.1073C23.7663 30 23.4759 29.7496 23.4305 29.4087C22.7292 24.0393 21.8389 10.9185 30.0887 2.38296C30.8809 1.56437 31.7818 0.761909 32.8119 0.000136124Z"
-                                                    fill="#C88C00"
-                                                />
-                                            </svg>
-                                            <p
-                                                class="text-22px/8 mt-2.5 text-black lg:text-2xl/8.5"
-                                                x-text="item.message"
-                                            >
-                                                A flawless booking experience
-                                                from start to finish! The resort
-                                                was even more luxurious than I
-                                                imagined, with stunning
-                                                interiors and exceptional
-                                                hospitality. Truly world-class
-                                                service in every detail.
-                                            </p>
-                                            <div
-                                                class="mt-8 flex items-center gap-2.5 lg:mt-14"
-                                            >
-                                                <div
-                                                    class="size-15 shrink-0 overflow-hidden rounded-full"
-                                                >
-                                                    <img
-                                                        :src="item.user_image"
-                                                        alt="User image"
-                                                        class="size-full object-cover object-top"
-                                                        loading="lazy"
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <h4
-                                                        class="text-22px font-noir-et-blanc text-black"
-                                                        x-text="item.name"
-                                                    >
-                                                        Olivia Martinez
-                                                    </h4>
-                                                    <p
-                                                        class="text-xl/5.5"
-                                                        x-text="item.location"
-                                                    >
-                                                        Los Angeles
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="-mb-11 flex justify-end gap-4 lg:mt-14 lg:mb-0 lg:justify-start"
-                                            >
-                                                <button
-                                                    type="button"
-                                                    class="testimonial-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                                                >
-                                                    <i
-                                                        data-lucide="arrow-left"
-                                                        class="size-5 shrink-0 text-black sm:size-6"
-                                                    ></i>
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="testimonial-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3"
-                                                >
-                                                    <i
-                                                        data-lucide="arrow-right"
-                                                        class="size-5 shrink-0 text-black sm:size-6"
-                                                    ></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="relative flex h-125 items-center justify-center overflow-hidden p-4 after:absolute after:inset-0 after:-z-1 after:bg-black/70 lg:h-175"
-            >
-                <img
-                    src="assets/images/video-banner.jpg"
-                    alt="Video banner"
-                    class="absolute inset-0 -z-1 size-full object-cover"
-                />
-                <div
-                    class="mx-auto max-w-150 space-y-7.5 text-center tracking-[4px]"
-                >
-                    <button
-                        type="button"
-                        @click="videoModal = !videoModal"
-                        class="relative mx-auto grid size-20 place-items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-[10px] duration-300 [&_svg]:hover:scale-90"
-                    >
-                        <span
-                            class="absolute inset-0 -z-1 animate-[ping_2s_ease-out_infinite] rounded-full bg-white/30 md:bg-white/10"
-                        ></span>
-                        <i
-                            data-lucide="play"
-                            class="size-10 shrink-0 fill-white text-white duration-300"
-                        ></i>
-                        <span class="sr-only">Play video</span>
-                    </button>
-                    <h2
-                        class="font-noir-et-blanc text-3xl/12 tracking-[.65px] text-white lg:text-[50px]/21.5"
-                    >
-                        Luxurious island escapes for a perfect getaway
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <footer
-            class="relative z-1 mt-auto overflow-hidden bg-black pt-14 pb-5 lg:pt-20"
-        >
-            <img
-                src="assets/images/footer-banner.png"
-                alt="Footer banner"
-                class="absolute inset-0 -z-1 size-auto"
-            />
-            <div class="container">
-                <div class="space-y-2.5">
-                    <div class="flex items-end gap-0 sm:gap-8 lg:gap-14">
-                        <div
-                            class="flex h-10 grow items-center -space-x-2 opacity-20 lg:h-14"
-                        >
-                            <svg
-                                width="15"
-                                height="8"
-                                viewBox="0 0 15 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
-                                    fill="#C6C2BE"
-                                />
-                            </svg>
-                            <span
-                                class="block h-[0.5px] w-full grow bg-gray-100"
-                            ></span>
-                            <svg
-                                width="15"
-                                height="8"
-                                viewBox="0 0 15 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
-                                    fill="#C6C2BE"
-                                />
-                            </svg>
-                        </div>
-                        <a href="/" class="inline-flex">
-                            <img
-                                src="assets/images/footer-logo.svg"
-                                alt="Footer banner"
-                                class="h-24 w-full lg:h-33"
-                            />
+                        class="inline-flex items-center gap-2.5 p-2 text-base/4 font-medium text-black ring-1 ring-[#41312D]/10 sm:gap-4 sm:px-4 sm:py-3 sm:text-xl/4">
+                        <a href="booking.html"
+                            class="duration-300 hover:opacity-80">
+                            Book Now
                         </a>
-                        <div
-                            class="flex h-10 grow items-center -space-x-2 opacity-20 lg:h-14"
-                        >
-                            <svg
-                                width="15"
-                                height="8"
-                                viewBox="0 0 15 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
-                                    fill="#C6C2BE"
-                                />
-                            </svg>
+                        <span
+                            class="bg-primary block h-4 w-px shrink-0 translate-y-px rounded"></span>
+                        <button type="button"
+                            class="group flex items-center gap-0.5 duration-300 hover:opacity-80 sm:gap-4"
+                            @click="headerMenu = !headerMenu">
+                            Menu
                             <span
-                                class="block h-[0.5px] w-full grow bg-gray-100"
-                            ></span>
-                            <svg
-                                width="15"
-                                height="8"
-                                viewBox="0 0 15 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
-                                    fill="#C6C2BE"
-                                />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col items-start gap-10 py-12 lg:flex-row lg:gap-14 lg:pt-14 lg:pb-20 xl:gap-24 2xl:gap-29"
-                >
-                    <div
-                        class="grid w-full max-w-227 grid-cols-2 flex-wrap items-start justify-between gap-x-8 gap-y-10 min-[540px]:flex"
-                    >
-                        <ul
-                            class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6"
-                        >
-                            <h3
-                                class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25"
-                            >
-                                Quick Links
-                            </h3>
-                            <li>
-                                <a href="/about-us.html" class="footer-link">
-                                    About us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/blogs.html" class="footer-link">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/events.html" class="footer-link"
-                                    >Events</a
-                                >
-                            </li>
-                            <li>
-                                <a href="/gallery.html" class="footer-link"
-                                    >Gallery</a
-                                >
-                            </li>
-                            <li>
-                                <a href="/my-booking.html" class="footer-link">
-                                    My Bookings
-                                </a>
-                            </li>
-                        </ul>
-                        <ul
-                            class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6"
-                        >
-                            <h3
-                                class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25"
-                            >
-                                Rooms
-                            </h3>
-                            <li>
-                                <a
-                                    href="/room-details.html"
-                                    class="footer-link"
-                                >
-                                    Deluxe Rooms
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/room-details.html"
-                                    class="footer-link"
-                                >
-                                    Premium Rooms
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/room-details.html"
-                                    class="footer-link"
-                                >
-                                    Executive Suites
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/room-details.html"
-                                    class="footer-link"
-                                >
-                                    Family Rooms
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/room-details.html"
-                                    class="footer-link"
-                                >
-                                    Residence Suite
-                                </a>
-                            </li>
-                        </ul>
-                        <ul
-                            class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6"
-                        >
-                            <h3
-                                class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25"
-                            >
-                                Services
-                            </h3>
-                            <li>
-                                <a href="/services.html" class="footer-link">
-                                    Concierge Service
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/services.html" class="footer-link">
-                                    Fine Dining
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/services.html" class="footer-link">
-                                    Event & Banquet Halls
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/services.html" class="footer-link">
-                                    Airport Transfers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/services.html" class="footer-link">
-                                    Valet Parking
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="w-full shrink-0 sm:w-100 lg:ml-auto">
-                        <h3
-                            class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25"
-                        >
-                            Stay in the know
-                        </h3>
-                        <form class="mt-5 flex">
-                            <input
-                                type="text"
-                                placeholder="Email"
-                                class="form-input border-white/20 text-gray-100 placeholder:text-gray-100"
-                            />
-                            <button
-                                type="submit"
-                                class="bg-background hover:bg-background-dark shrink-0 p-2.5 text-xl/5.5 font-medium text-black duration-300 sm:p-4"
-                            >
-                                Subscribe
-                            </button>
-                        </form>
-                        <div class="mt-7.5 space-y-5">
-                            <h3
-                                class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded xl:text-[26px]/11.25"
-                            >
-                                Stay Connected
-                            </h3>
-                            <a
-                                href="mailto:info@royalsuites.com"
-                                class="lg:text-22px/6 hover:text-background flex w-fit items-center gap-1.5 text-xl/5 font-light text-gray-100 transition"
-                            >
-                                <i
-                                    data-lucide="mail"
-                                    class="text-background size-5 shrink-0"
-                                >
-                                </i>
-                                info@royalsuites.com</a
-                            >
-                            <a
-                                href="tel:+15179941643"
-                                class="lg:text-22px/6 hover:text-background flex w-fit items-center gap-1.5 text-xl/5 font-light text-gray-100 transition"
-                            >
-                                <i
-                                    data-lucide="phone"
-                                    class="text-background size-5 shrink-0"
-                                >
-                                </i>
-                                +1 517-994-1643</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="border-background/10 flex flex-col-reverse items-center justify-between gap-5 border-t pt-4 lg:flex-row lg:pt-5"
-                >
-                    <div
-                        class="text-background text-center text-lg/5 font-light md:text-left lg:text-xl/5.5"
-                        x-data="{ currentYear: new Date().getFullYear() }"
-                    >
-                        Copyright ©
-                        <span x-text="currentYear"></span>&nbsp;RoyalSuites. All
-                        Rights Reserved.
-                    </div>
-                    <div
-                        class="flex flex-wrap items-center justify-center gap-2.5"
-                    >
-                        <a
-                            href="/terms-conditions.html"
-                            class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5"
-                            >Terms & Conditions</a
-                        >
-                        <span class="bg-primary block h-4 w-px shrink-0"></span>
-                        <a
-                            href="/privacy-policy.html"
-                            class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5"
-                            >Privacy Policy</a
-                        >
-                        <span class="bg-primary block h-4 w-px shrink-0"></span>
-                        <a
-                            href="/cancellation-policy.html"
-                            class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5"
-                            >Cancellation Policy</a
-                        >
+                                class="flex size-5 translate-y-px flex-col justify-center gap-1 px-1 duration-300 group-hover:rotate-y-180 sm:size-7.5 sm:gap-2">
+                                <span
+                                    class="h-0.5 w-full rounded bg-black"></span>
+                                <span
+                                    class="h-0.5 w-full rounded bg-black"></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
-        </footer>
-
-        <!-- Video modal -->
-        <div
-            x-transition.opacity=""
-            class="fixed inset-0 z-51 hidden items-center justify-center overflow-y-auto overscroll-y-none bg-black/70"
-            @click.self="videoModal = false"
-            :class="{ 'flex!': videoModal }"
-        >
-            <div
-                class="relative m-auto w-full max-w-5xl p-2"
-                x-show="videoModal"
-                style="display: none"
-            >
-                <button
-                    @click="videoModal = false"
-                    class="absolute top-0 right-0 rounded-full bg-white p-1 text-2xl text-black transition hover:scale-105"
-                >
-                    <i data-lucide="x" class="size-5"> </i>
-                    <span class="sr-only">Close</span>
+            <div class="fixed inset-x-0 -top-full z-50 h-0 w-full overflow-x-hidden overflow-y-auto bg-white transition-all duration-500"
+                :class="{ 'top-0 h-dvh': headerMenu }">
+                <div class="relative z-1 overflow-y-auto">
+                    <img src="assets/images/cloud.png" alt="bg menu"
+                        class="absolute top-0 left-0 h-40 w-auto lg:h-auto" />
+                    <img src="assets/images/submenu-banner.png" alt="bg menu"
+                        class="fixed right-0 -bottom-full h-10 w-auto duration-700 ease-in-out sm:h-30 2xl:h-45"
+                        :class="{ 'bottom-0': headerMenu }"
+                        x-transition.delay.300ms />
+                    <img src="assets/images/menu-bg.jpg" alt="bg menu"
+                        class="fixed inset-0 -top-full -z-1 h-full w-full object-cover opacity-15 transition-all duration-500"
+                        :class="{ 'top-0': headerMenu }"
+                        x-transition.delay.300ms />
+                    <div
+                        class="relative z-2 flex h-full w-full flex-wrap items-start gap-10 px-5 py-16 sm:px-8 md:flex-nowrap md:gap-40 lg:px-20 xl:pt-30 xl:pb-44 2xl:gap-89 2xl:px-60">
+                        <div
+                            class="grid w-full grid-cols-2 gap-4 md:w-auto md:grid-cols-1">
+                            <ul class="shrink-0 space-y-4 lg:hidden">
+                                <li>
+                                    <a href="index.html"
+                                        class="nav-link">Home</a>
+                                </li>
+                                <li>
+                                    <a href="rooms.html" class="nav-link">
+                                        Rooms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dining.html" class="nav-link">
+                                        Dining
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="nav-link">
+                                        Services
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="shrink-0 space-y-4">
+                                <li>
+                                    <a href="events.html" class="nav-link">
+                                        Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html" class="nav-link">
+                                        About us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html" class="nav-link">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html" class="nav-link">
+                                        Gallery
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogs.html" class="nav-link">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="relative z-1 w-full space-y-6 md:w-auto xl:space-y-10">
+                            <ul class="space-y-2.5">
+                                <li class="bg-primary h-0.5 w-5 rounded"></li>
+                                <li>
+                                    <a href="faqs.html"
+                                        class="text-gray font-crimson-pro inline-flex text-2xl -tracking-[2%] transition hover:text-black xl:text-3xl/10">
+                                        FAQs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="my-booking.html"
+                                        class="text-gray font-crimson-pro inline-flex text-2xl -tracking-[2%] transition hover:text-black xl:text-3xl/10">
+                                        My bookings
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="space-y-2.5">
+                                <span
+                                    class="bg-primary block h-0.5 w-5 rounded"></span>
+                                <div class="text-xl/5.5">
+                                    Stay Connected
+                                </div>
+                                <a href="mailto:info@royalsuites.com"
+                                    class="block w-fit text-2xl text-black transition hover:opacity-70 xl:text-3xl/8">info@royalsuites.com</a>
+                                <a href="tel:+15179941643"
+                                    class="block w-fit text-2xl text-black transition hover:opacity-70 xl:text-3xl/8">+1
+                                    517-994-1643</a>
+                            </div>
+                            <div class="space-y-2.5">
+                                <span
+                                    class="bg-primary block h-0.5 w-5 rounded"></span>
+                                <div class="text-xl/5.5">Social Media</div>
+                                <div
+                                    class="flex flex-wrap items-center gap-2.5">
+                                    <a href="https://instagram.com"
+                                        target="_blank"
+                                        class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8">
+                                        Instagram
+                                    </a>
+                                    <span
+                                        class="block h-4.5 w-0.5 shrink-0 rounded bg-black/30"></span>
+                                    <a href="https://facebook.com"
+                                        target="_blank"
+                                        class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8">
+                                        Facebook
+                                    </a>
+                                    <span
+                                        class="block h-4.5 w-0.5 shrink-0 rounded bg-black/30"></span>
+                                    <a href="https://linkedin.com"
+                                        target="_blank"
+                                        class="inline-flex text-2xl text-black transition hover:opacity-70 xl:text-3xl/8">
+                                        LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="gallery" class="flex flex-wrap gap-2.5"
+                                x-data="headerGallery()">
+                                <template x-for="(item, index) in images"
+                                    :key="index">
+                                    <a :href="item.image"
+                                        class="group relative block size-20 overflow-hidden lg:size-30"
+                                        :data-pswp-width="item.width"
+                                        :data-pswp-height="item.height"
+                                        target="_blank">
+                                        <img :src="item.image"
+                                            alt="Gallery image"
+                                            class="h-full w-full object-cover transition-transform" />
+                                        <div
+                                            class="absolute inset-0 z-1 grid place-content-center bg-black/50 opacity-0 transition group-hover:opacity-100">
+                                            <button type="button"
+                                                class="text-white hover:scale-105">
+                                                <i data-lucide="eye"
+                                                    class="size-4.5 shrink-0 duration-300"></i>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button"
+                    class="absolute top-5 right-5 z-10 bg-white duration-300 hover:rotate-y-180 md:top-9 md:right-9 xl:right-52"
+                    @click="headerMenu = !headerMenu">
+                    <i data-lucide="x"
+                        class="size-5.5 shrink-0 sm:size-7.5"></i>
+                    <span class="sr-only">Close menu</span>
                 </button>
-                <div class="aspect-video">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/GGf1JjSAKP4?rel=0&autoplay=1&v=GGf1JjSAKP4"
-                        frameborder="0"
-                        allowfullscreen=""
-                        class="h-full w-full"
-                    ></iframe>
+            </div>
+        </div>
+    </header>
+    <div class="grow">
+        <div class="relative z-1 flex h-[calc(100vh-99px)] overflow-hidden">
+            <img src="assets/images/home-banner.jpg" alt="Home banner"
+                class="absolute inset-0 -z-1 size-full object-cover" />
+            <span
+                class="absolute inset-0 -z-1 bg-gradient-to-t from-[#2B1C06] to-[#2B1C06]/25 lg:to-transparent"></span>
+            <div
+                class="relative container flex h-full flex-col items-center justify-center gap-5 py-20 text-center">
+                <h1
+                    class="font-noir-et-blanc text-4xl/14 text-white sm:text-5xl lg:text-[70px]/30">
+                    Experience Luxury, <span class="italic">Redefined</span>
+                </h1>
+                <p
+                    class="text-background sm:text-22px mx-auto max-w-178 text-lg/5 lg:text-[26px]/9">
+                    Book world-class stays with seamless comfort, curated
+                    elegance, and unforgettable moments.
+                </p>
+                <a href="/rooms.html"
+                    class="hover:bg-background/10 mt-2.5 inline-flex items-center justify-center border border-white p-4 text-lg/3 text-white duration-300 sm:p-5 sm:text-xl/3">
+                    Explore Suits
+                </a>
+            </div>
+        </div>
+
+        <div class="container space-y-10 py-16 lg:space-y-14 lg:py-20">
+            <div class="section-heading text-center">
+                <h2>Our Valued Partners</h2>
+            </div>
+            <div class="partner-swiper swiper" x-data="partnerData()"
+                x-init="initSwipers()">
+                <div class="swiper-wrapper">
+                    <template x-for="(item, index) in partners">
+                        <div class="swiper-slide" key="item.id">
+                            <img :src="item.image" alt="partner-swiper-1"
+                                class="mx-auto h-7 w-auto" />
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
 
-        <script src="assets/js/lucide.min.js"></script>
-        <script src="assets/js/alpine.min.js" defer></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/collapse-cdn.min.js" defer></script>
+        <div class="bg-background-dark overflow-hidden py-16 lg:py-20">
+            <div class="container space-y-8 sm:space-y-14">
+                <div
+                    class="flex flex-wrap items-end gap-5 sm:flex-nowrap sm:items-center sm:gap-10">
+                    <div class="section-heading max-w-124">
+                        <h2>Rooms & Suites</h2>
+                        <p>
+                            Experience comfort redefined with timeless
+                            luxury, serenity, and personalized care.
+                        </p>
+                    </div>
+                    <div class="ml-auto flex gap-2.5 sm:gap-4">
+                        <button type="button"
+                            class="rooms-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                            <i data-lucide="arrow-left"
+                                class="size-5 shrink-0 text-black sm:size-6"></i>
+                        </button>
+                        <button type="button"
+                            class="rooms-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                            <i data-lucide="arrow-right"
+                                class="size-5 shrink-0 text-black sm:size-6"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="rooms-swiper swiper overflow-visible!"
+                    x-data="roomsData()" x-init="initSwipers()">
+                    <div class="swiper-wrapper">
+                        <template x-for="(item, index) in rooms">
+                            <div class="swiper-slide" key="item.id">
+                                <div class="group relative">
+                                    <a href="/room-details.html"
+                                        class="absolute inset-0 z-1"></a>
+                                    <div
+                                        class="relative block aspect-[626/500] overflow-hidden">
+                                        <img :src="item.image" alt="Room image"
+                                            class="size-full object-cover duration-300 group-hover:scale-105" />
+                                        <span
+                                            class="absolute inset-0 top-auto h-1/2 bg-gradient-to-t from-[#000]/80 opacity-0 transition-all duration-300 group-hover:opacity-100"></span>
+                                        <div
+                                            class="border-primary divide-primary invisible absolute inset-x-0 bottom-0 grid grid-cols-2 divide-x border-t opacity-0 delay-100 duration-300 group-hover:visible group-hover:opacity-100">
+                                            <div
+                                                class="sm:text-22px space-y-2.5 p-2.5 text-center text-lg font-medium text-white sm:p-4">
+                                                <img src="assets/images/icon-breakfast.svg"
+                                                    alt="Breakfast icon"
+                                                    class="mx-auto h-10 w-auto" />
+                                                <p>
+                                                    Breakfast
+                                                    <span
+                                                        x-text="item.breakfast"></span>
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="sm:text-22px space-y-2.5 p-2.5 text-center text-lg font-medium text-white sm:p-4">
+                                                <img src="assets/images/icon-users.svg"
+                                                    alt="Breakfast icon"
+                                                    class="mx-auto h-10 w-auto" />
+                                                <p>
+                                                    <span
+                                                        x-text="item.adults"></span>
+                                                    Adults
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-3 flex items-center gap-2.5 lg:mt-5">
+                                        <div class="grow space-y-1.5">
+                                            <h3 class="font-noir-et-blanc sm:text-22px/6.5 line-clamp-2 text-xl/6 break-words text-black lg:text-3xl/13"
+                                                x-text="item.name"></h3>
+                                            <h4
+                                                class="text-gray text-xl/6 lg:text-2xl/7">
+                                                <span
+                                                    x-text="item.price"></span>
+                                                / Night
+                                            </h4>
+                                        </div>
+                                        <span
+                                            class="ml-auto duration-300 group-hover:rotate-45">
+                                            <i data-lucide="arrow-up-right"
+                                                class="size-6 shrink-0 sm:size-7.5"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <script>
-            function partnerData() {
-                return {
-                    partners: [
-                        {
-                            id: 1,
-                            image: 'assets/images/partner-logo-1.svg',
-                        },
-                        {
-                            id: 2,
-                            image: 'assets/images/partner-logo-2.svg',
-                        },
-                        {
-                            id: 3,
-                            image: 'assets/images/partner-logo-3.svg',
-                        },
-                        {
-                            id: 4,
-                            image: 'assets/images/partner-logo-4.svg',
-                        },
-                        {
-                            id: 5,
-                            image: 'assets/images/partner-logo-5.svg',
-                        },
-                        {
-                            id: 6,
-                            image: 'assets/images/partner-logo-6.svg',
-                        },
-                        {
-                            id: 7,
-                            image: 'assets/images/partner-logo-7.svg',
-                        },
-                        {
-                            id: 8,
-                            image: 'assets/images/partner-logo-8.svg',
-                        },
-                        {
-                            id: 9,
-                            image: 'assets/images/partner-logo-9.svg',
-                        },
-                        {
-                            id: 10,
-                            image: 'assets/images/partner-logo-1.svg',
-                        },
-                        {
-                            id: 11,
-                            image: 'assets/images/partner-logo-2.svg',
-                        },
-                        {
-                            id: 12,
-                            image: 'assets/images/partner-logo-3.svg',
-                        },
-                    ],
+        <div class="overflow-hidden bg-[#F6F3EC] py-16 lg:py-20">
+            <div class="container space-y-8 sm:space-y-14">
+                <div
+                    class="flex flex-wrap items-end gap-5 sm:flex-nowrap sm:items-center sm:gap-10">
+                    <div
+                        class="section-heading flex grow flex-col items-start xl:flex-row">
+                        <h2 class="shrink-0">Facilities & Services</h2>
+                        <p class="max-w-183 xl:mt-0 xl:ml-auto">
+                            Experience world-class comforts, thoughtful
+                            amenities, and personalized services designed to
+                            make your stay truly unforgettable.
+                        </p>
+                    </div>
+                    <div class="ml-auto flex gap-2.5 sm:hidden sm:gap-4">
+                        <button type="button"
+                            class="facilities-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                            <i data-lucide="arrow-left"
+                                class="size-5 shrink-0 text-black sm:size-6"></i>
+                        </button>
+                        <button type="button"
+                            class="facilities-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                            <i data-lucide="arrow-right"
+                                class="size-5 shrink-0 text-black sm:size-6"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="facilities-swiper swiper relative overflow-visible!"
+                    x-data="facilitiesData()" x-init="initSwipers()">
+                    <div class="swiper-wrapper">
+                        <template x-for="(item, index) in facilities">
+                            <div class="swiper-slide" key="item.id">
+                                <div class="group relative">
+                                    <a href="/services.html"
+                                        class="absolute inset-0 z-1"></a>
+                                    <div
+                                        class="relative block h-100 overflow-hidden sm:aspect-[366/560] sm:h-auto">
+                                        <img :src="item.image"
+                                            alt="Facilities image"
+                                            class="size-full scale-110 object-cover duration-300 group-hover:scale-100" />
+                                        <span
+                                            class="absolute inset-0 top-auto h-1/2 bg-gradient-to-t from-[#000]/80 transition-all duration-300"></span>
+                                        <div
+                                            class="absolute inset-x-0 bottom-0 p-7.5 duration-300">
+                                            <h3 class="text-22px font-medium text-white"
+                                                x-text="item.title"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    initSwipers() {
-                        this.$nextTick(() => {
-                            lucide.createIcons()
-                            new Swiper('.partner-swiper', {
-                                spaceBetween: 40,
-                                slidesPerView: 3,
-                                centeredSlides: false,
-                                speed: 2000,
-                                autoplay: {
-                                    delay: 1500,
-                                    disableOnInteraction: true,
-                                },
-                                loop: true,
-                                breakpoints: {
-                                    540: {
-                                        slidesPerView: 4,
-                                        centeredSlides: true,
-                                    },
-                                    768: {
-                                        slidesPerView: 5,
-                                        centeredSlides: true,
-                                    },
-                                    1280: {
-                                        slidesPerView: 7,
-                                        centeredSlides: true,
-                                        spaceBetween: 50,
-                                    },
-                                    1380: {
-                                        slidesPerView: 9,
-                                        centeredSlides: true,
-                                        spaceBetween: 70,
-                                    },
-                                },
-                            })
-                        })
+        <div
+            class="bg-background-dark relative z-1 overflow-hidden py-16 lg:py-20">
+            <span class="absolute right-0 bottom-0 -z-1">
+                <img src="assets/images/palace.png" alt="Palace image"
+                    class="size-auto" />
+                <span
+                    class="from-background-dark absolute inset-0 w-1/3 bg-gradient-to-r"></span>
+            </span>
+            <div class="container space-y-10 sm:space-y-14">
+                <div
+                    class="section-heading flex flex-col items-start xl:flex-row xl:gap-5">
+                    <h2>Amenities That Define Luxury</h2>
+                    <p class="max-w-183 xl:mt-0 xl:ml-auto">
+                        Discover thoughtfully curated comforts and luxuries
+                        that blend relaxation, elegance, and modern
+                        convenience in perfect harmony.
+                    </p>
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2 lg:gap-6 2xl:grid-cols-4"
+                    x-data="amenitiesData()">
+                    <template x-for="(item, index) in amenities">
+                        <div class="group hover:ring-primary relative z-1 flex flex-col gap-5 overflow-hidden transition-all hover:ring-1 sm:gap-8 2xl:gap-14"
+                            key="item.id">
+                            <span
+                                class="absolute inset-0 transition-all duration-500 group-hover:bg-gradient-to-t group-hover:from-[#000]/80"></span>
+                            <span
+                                class="absolute inset-0 h-full bg-white transition-all duration-500 group-hover:h-0"></span>
+                            <img :src="item.background_image"
+                                alt="Background image"
+                                class="invisible absolute inset-0 -z-1 size-full scale-110 object-cover opacity-0 duration-500 group-hover:visible group-hover:scale-101 group-hover:opacity-100" />
+                            <img :src="item.background_icon" alt="Icon"
+                                class="relative ml-auto size-20 duration-300 group-hover:opacity-0" />
+                            <div
+                                class="relative mt-auto block grow p-5 duration-500 group-hover:text-white lg:p-7.5">
+                                <div class="relative size-15">
+                                    <img :src="item.icon_primary"
+                                        alt="Amenities dark icon"
+                                        class="absolute inset-0 size-full object-contain opacity-100 transition duration-300 group-hover:opacity-0" />
+                                    <img :src="item.icon_light"
+                                        alt="Amenities light icon"
+                                        class="absolute inset-0 size-full object-contain opacity-0 transition duration-300 group-hover:opacity-100" />
+                                </div>
+                                <h3 class="font-noir-et-blanc mt-6 text-2xl/8 font-medium text-black duration-500 group-hover:text-white sm:mt-7.5 sm:text-3xl/10 lg:text-[32px]/14"
+                                    x-text="item.title"></h3>
+                                <p class="mt-2.5 text-lg/6.5"
+                                    x-text="item.description"></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="bg-background grid gap-10 overflow-hidden pt-16 md:grid-cols-2 md:gap-0 md:pt-0">
+            <div
+                class="section-heading relative flex flex-col justify-center px-4 text-center md:py-14 xl:p-20">
+                <img src="assets/images/flower-shadow.png" alt="flower-shadow"
+                    class="absolute top-0 right-0 hidden w-1/2 md:block xl:w-auto" />
+                <img src="assets/images/icon-flower.svg" alt="Flower icon"
+                    class="mx-auto mb-5 size-15" />
+                <h2>Why Choose Us</h2>
+                <p>
+                    At <span class="text-primary">RoyalSuites</span>, we
+                    bring you carefully handpicked luxury hotels that meet
+                    the highest standards, ranging from modern city stays to
+                    royal heritage palaces and serene beachfront resorts.
+                </p>
+            </div>
+            <div class="h-100 overflow-hidden md:h-auto">
+                <img src="assets/images/choose-img.jpg" alt="Choose image"
+                    class="size-full object-cover" />
+            </div>
+        </div>
+        <div
+            class="bg-background grid gap-10 overflow-hidden pt-16 md:grid-cols-2 md:gap-0 md:pt-0">
+            <div
+                class="section-heading relative order-none flex flex-col justify-center px-4 text-center md:order-2 md:py-14 xl:p-20">
+                <img src="assets/images/flower-shadow.png" alt="flower-shadow"
+                    class="absolute top-0 left-0 hidden w-1/2 rotate-y-180 md:block xl:w-auto" />
+                <img src="assets/images/icon-flower.svg" alt="Flower icon"
+                    class="mx-auto mb-5 size-15" />
+                <h2>About RoyalSuites</h2>
+                <p>
+                    <span class="text-primary">RoyalSuites</span> is
+                    dedicated to providing luxury services that go beyond
+                    expectations. From refined comfort to personalized
+                    hospitality, we craft stays that feel effortless and
+                    unforgettable.
+                </p>
+            </div>
+            <div class="order-none h-100 overflow-hidden md:order-1 md:h-auto">
+                <img src="assets/images/about-img.jpg" alt="Choose image"
+                    class="size-full object-cover" />
+            </div>
+        </div>
+
+        <div class="bg-background-dark">
+            <div
+                class="border-primary mx-4 border border-t-0 pt-14 pb-5 sm:py-14 xl:mx-14 xl:py-20">
+                <div
+                    class="section-heading container flex flex-col items-start xl:flex-row xl:gap-5">
+                    <h2>Beyond Stays, Into Memories</h2>
+                    <p class="max-w-150 xl:mt-0 xl:ml-auto">
+                        Hear how every thoughtful detail transforms each
+                        stay into an unforgettable, cherished experience of
+                        timeless luxury.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-swiper swiper" x-data="testimonialData()"
+                x-init="initSwipers()">
+                <div class="swiper-wrapper">
+                    <template x-for="(item, index) in testimonials">
+                        <div class="swiper-slide">
+                            <div
+                                class="relative flex flex-col-reverse lg:flex-row">
+                                <div
+                                    class="relative h-100 w-full sm:h-auto lg:absolute lg:bottom-0 lg:left-0 lg:max-w-225">
+                                    <img src="assets/images/testimonial-bg.png"
+                                        alt="Testimonials image"
+                                        class="h-full w-full object-cover sm:h-auto lg:w-auto" />
+                                    <span
+                                        class="from-background-dark via-background-dark absolute inset-x-0 top-0 left-0 h-1/2 w-full bg-gradient-to-b lg:inset-x-auto lg:inset-y-0 lg:size-1/4 lg:via-transparent"></span>
+                                </div>
+                                <div class="container">
+                                    <div
+                                        class="bg-background-dark relative pt-14 lg:ml-auto lg:w-[54%] lg:pb-34 lg:pl-7.5">
+                                        <span
+                                            class="from-background-dark via-background-dark/50 absolute inset-y-0 -left-1/3 hidden w-1/3 bg-gradient-to-l lg:block"></span>
+                                        <svg width="40" height="30"
+                                            viewBox="0 0 40 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-7.5">
+                                            <path
+                                                d="M9.81191 0.000136124L15.0114 4.24935C15.342 4.51925 15.3507 5.02353 15.0429 5.32009C14.1282 6.19728 13.0841 7.35326 12.0924 8.82703C11.1427 10.2405 10.4781 11.59 10.0112 12.7389C9.83106 13.1828 10.1634 13.6569 10.6391 13.6569H16.3109C16.6922 13.6569 17 13.9676 17 14.3511V29.3075C17 29.6893 16.6922 30 16.3109 30H1.10733C0.766283 30 0.475939 29.7496 0.430495 29.4087C-0.27083 24.0393 -1.16105 10.9185 7.08869 2.38296C7.88095 1.56437 8.78177 0.761909 9.81191 0.000136124Z"
+                                                fill="#C88C00" />
+                                            <path
+                                                d="M32.8119 0.000136124L38.0114 4.24935C38.342 4.51925 38.3507 5.02353 38.0429 5.32009C37.1282 6.19728 36.0841 7.35326 35.0924 8.82703C34.1427 10.2405 33.4781 11.59 33.0112 12.7389C32.8311 13.1828 33.1634 13.6569 33.6391 13.6569H39.3109C39.6922 13.6569 40 13.9676 40 14.3511V29.3075C40 29.6893 39.6922 30 39.3109 30H24.1073C23.7663 30 23.4759 29.7496 23.4305 29.4087C22.7292 24.0393 21.8389 10.9185 30.0887 2.38296C30.8809 1.56437 31.7818 0.761909 32.8119 0.000136124Z"
+                                                fill="#C88C00" />
+                                        </svg>
+                                        <p class="text-22px/8 mt-2.5 text-black lg:text-2xl/8.5"
+                                            x-text="item.message">
+                                            A flawless booking experience
+                                            from start to finish! The resort
+                                            was even more luxurious than I
+                                            imagined, with stunning
+                                            interiors and exceptional
+                                            hospitality. Truly world-class
+                                            service in every detail.
+                                        </p>
+                                        <div
+                                            class="mt-8 flex items-center gap-2.5 lg:mt-14">
+                                            <div
+                                                class="size-15 shrink-0 overflow-hidden rounded-full">
+                                                <img :src="item.user_image"
+                                                    alt="User image"
+                                                    class="size-full object-cover object-top"
+                                                    loading="lazy" />
+                                            </div>
+                                            <div>
+                                                <h4 class="text-22px font-noir-et-blanc text-black"
+                                                    x-text="item.name">
+                                                    Olivia Martinez
+                                                </h4>
+                                                <p class="text-xl/5.5"
+                                                    x-text="item.location">
+                                                    Los Angeles
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="-mb-11 flex justify-end gap-4 lg:mt-14 lg:mb-0 lg:justify-start">
+                                            <button type="button"
+                                                class="testimonial-swiper-button-prev grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                                                <i data-lucide="arrow-left"
+                                                    class="size-5 shrink-0 text-black sm:size-6"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="testimonial-swiper-button-next grid place-content-center border border-gray-100 p-2 duration-300 hover:bg-gray-100/30 lg:p-3">
+                                                <i data-lucide="arrow-right"
+                                                    class="size-5 shrink-0 text-black sm:size-6"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="relative flex h-125 items-center justify-center overflow-hidden p-4 after:absolute after:inset-0 after:-z-1 after:bg-black/70 lg:h-175">
+            <img src="assets/images/video-banner.jpg" alt="Video banner"
+                class="absolute inset-0 -z-1 size-full object-cover" />
+            <div
+                class="mx-auto max-w-150 space-y-7.5 text-center tracking-[4px]">
+                <button type="button" @click="videoModal = !videoModal"
+                    class="relative mx-auto grid size-20 place-items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-[10px] duration-300 [&_svg]:hover:scale-90">
+                    <span
+                        class="absolute inset-0 -z-1 animate-[ping_2s_ease-out_infinite] rounded-full bg-white/30 md:bg-white/10"></span>
+                    <i data-lucide="play"
+                        class="size-10 shrink-0 fill-white text-white duration-300"></i>
+                    <span class="sr-only">Play video</span>
+                </button>
+                <h2
+                    class="font-noir-et-blanc text-3xl/12 tracking-[.65px] text-white lg:text-[50px]/21.5">
+                    Luxurious island escapes for a perfect getaway
+                </h2>
+            </div>
+        </div>
+    </div>
+    <footer
+        class="relative z-1 mt-auto overflow-hidden bg-black pt-14 pb-5 lg:pt-20">
+        <img src="assets/images/footer-banner.png" alt="Footer banner"
+            class="absolute inset-0 -z-1 size-auto" />
+        <div class="container">
+            <div class="space-y-2.5">
+                <div class="flex items-end gap-0 sm:gap-8 lg:gap-14">
+                    <div
+                        class="flex h-10 grow items-center -space-x-2 opacity-20 lg:h-14">
+                        <svg width="15" height="8" viewBox="0 0 15 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
+                                fill="#C6C2BE" />
+                        </svg>
+                        <span
+                            class="block h-[0.5px] w-full grow bg-gray-100"></span>
+                        <svg width="15" height="8" viewBox="0 0 15 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
+                                fill="#C6C2BE" />
+                        </svg>
+                    </div>
+                    <a href="/" class="inline-flex">
+                        <img src="assets/images/footer-logo.svg"
+                            alt="Footer banner" class="h-24 w-full lg:h-33" />
+                    </a>
+                    <div
+                        class="flex h-10 grow items-center -space-x-2 opacity-20 lg:h-14">
+                        <svg width="15" height="8" viewBox="0 0 15 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
+                                fill="#C6C2BE" />
+                        </svg>
+                        <span
+                            class="block h-[0.5px] w-full grow bg-gray-100"></span>
+                        <svg width="15" height="8" viewBox="0 0 15 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 4C9.35269 5.56322 7.50009 7.99984 4.20215 8C0.632931 8 0 4 0 4C0.00382076 3.97604 0.643684 0 4.20215 0C7.50014 0.000113292 9.35264 2.43677 15 4Z"
+                                fill="#C6C2BE" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-start gap-10 py-12 lg:flex-row lg:gap-14 lg:pt-14 lg:pb-20 xl:gap-24 2xl:gap-29">
+                <div
+                    class="grid w-full max-w-227 grid-cols-2 flex-wrap items-start justify-between gap-x-8 gap-y-10 min-[540px]:flex">
+                    <ul
+                        class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6">
+                        <h3
+                            class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25">
+                            Quick Links
+                        </h3>
+                        <li><a href="about-us.html" class="footer-link">About
+                                us</a></li>
+                        <li><a href="blogs.html" class="footer-link">Blog</a>
+                        </li>
+                        <li><a href="events.html" class="footer-link">Events</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="footer-link">Gallery</a></li>
+                        <li><a href="my-booking.html" class="footer-link">My
+                                Bookings</a></li>
+                    </ul>
+                    <ul
+                        class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6">
+                        <h3
+                            class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25">
+                            Rooms
+                        </h3>
+                        <li><a href="room-details.html"
+                                class="footer-link">Deluxe Rooms</a></li>
+                        <li><a href="room-details.html"
+                                class="footer-link">Premium Rooms</a></li>
+                        <li><a href="room-details.html"
+                                class="footer-link">Executive Suites</a></li>
+                        <li><a href="room-details.html"
+                                class="footer-link">Family Rooms</a></li>
+                        <li><a href="room-details.html"
+                                class="footer-link">Residence Suite</a></li>
+                    </ul>
+                    <ul
+                        class="space-y-3 leading-5 sm:space-y-4 lg:space-y-5 xl:leading-6">
+                        <h3
+                            class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25">
+                            Services
+                        </h3>
+                        <li><a href="services.html"
+                                class="footer-link">Concierge Service</a></li>
+                        <li><a href="services.html" class="footer-link">Fine
+                                Dining</a></li>
+                        <li><a href="services.html" class="footer-link">Event &
+                                Banquet Halls</a></li>
+                        <li><a href="services.html" class="footer-link">Airport
+                                Transfers</a></li>
+                        <li><a href="services.html" class="footer-link">Valet
+                                Parking</a></li>
+                    </ul>
+                </div>
+                <div class="w-full shrink-0 sm:w-100 lg:ml-auto">
+                    <h3
+                        class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded sm:text-2xl/10 xl:text-[26px]/11.25">
+                        Stay in the know
+                    </h3>
+                    <form class="mt-5 flex">
+                        <input type="text" placeholder="Email"
+                            class="form-input border-white/20 text-gray-100 placeholder:text-gray-100" />
+                        <button type="submit"
+                            class="bg-background hover:bg-background-dark shrink-0 p-2.5 text-xl/5.5 font-medium text-black duration-300 sm:p-4">
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="mt-7.5 space-y-5">
+                        <h3
+                            class="font-noir-et-blanc after:bg-primary text-background relative text-xl/9 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-5 after:rounded xl:text-[26px]/11.25">
+                            Stay Connected
+                        </h3>
+                        <a href="mailto:info@royalsuites.com"
+                            class="lg:text-22px/6 hover:text-background flex w-fit items-center gap-1.5 text-xl/5 font-light text-gray-100 transition">
+                            <i data-lucide="mail"
+                                class="text-background size-5 shrink-0">
+                            </i>
+                            info@royalsuites.com</a>
+                        <a href="tel:+15179941643"
+                            class="lg:text-22px/6 hover:text-background flex w-fit items-center gap-1.5 text-xl/5 font-light text-gray-100 transition">
+                            <i data-lucide="phone"
+                                class="text-background size-5 shrink-0">
+                            </i>
+                            +1 517-994-1643</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-background/10 flex flex-col-reverse items-center justify-between gap-5 border-t pt-4 lg:flex-row lg:pt-5">
+                <div class="text-background text-center text-lg/5 font-light md:text-left lg:text-xl/5.5"
+                    x-data="{ currentYear: new Date().getFullYear() }">
+                    Copyright ©
+                    <span x-text="currentYear"></span>&nbsp;RoyalSuites. All
+                    Rights Reserved.
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <a href="terms-conditions.html"
+                        class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5">Terms
+                        & Conditions</a>
+                    <span class="bg-primary block h-4 w-px shrink-0"></span>
+                    <a href="privacy-policy.html"
+                        class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5">Privacy
+                        Policy</a>
+                    <span class="bg-primary block h-4 w-px shrink-0"></span>
+                    <a href="cancellation-policy.html"
+                        class="text-background text-lg/4 font-light transition hover:text-gray-100 lg:text-xl/5.5">Cancellation
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video modal -->
+    <div x-transition.opacity=""
+        class="fixed inset-0 z-51 hidden items-center justify-center overflow-y-auto overscroll-y-none bg-black/70"
+        @click.self="videoModal = false" :class="{ 'flex!': videoModal }">
+        <div class="relative m-auto w-full max-w-5xl p-2" x-show="videoModal"
+            style="display: none">
+            <button @click="videoModal = false"
+                class="absolute top-0 right-0 rounded-full bg-white p-1 text-2xl text-black transition hover:scale-105">
+                <i data-lucide="x" class="size-5"> </i>
+                <span class="sr-only">Close</span>
+            </button>
+            <div class="aspect-video">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/GGf1JjSAKP4?rel=0&autoplay=1&v=GGf1JjSAKP4"
+                    frameborder="0" allowfullscreen=""
+                    class="h-full w-full"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/lucide.min.js"></script>
+    <script src="assets/js/alpine.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/collapse-cdn.min.js" defer></script>
+
+    <script>
+        function partnerData() {
+            return {
+                partners: [
+                    {
+                        id: 1,
+                        image: 'assets/images/partner-logo-1.svg',
                     },
-                }
-            }
-
-            function roomsData() {
-                return {
-                    rooms: [
-                        {
-                            id: 1,
-                            image: 'assets/images/room-1.jpg',
-                            name: 'Deluxe Room',
-                            price: '$7,500',
-                            adults: 2,
-                            breakfast: 'included',
-                        },
-                        {
-                            id: 2,
-                            image: 'assets/images/room-2.jpg',
-                            name: 'Superior Room',
-                            price: '$9,000',
-                            adults: 2,
-                            breakfast: 'included',
-                        },
-                        {
-                            id: 3,
-                            image: 'assets/images/room-3.jpg',
-                            name: 'Premium Room',
-                            price: '$11,500',
-                            adults: 2,
-                            breakfast: 'included',
-                        },
-                        {
-                            id: 4,
-                            image: 'assets/images/room-4.jpg',
-                            name: 'Superior Room',
-                            price: '$9,000',
-                            adults: 2,
-                            breakfast: 'included',
-                        },
-                    ],
-
-                    initSwipers() {
-                        this.$nextTick(() => {
-                            lucide.createIcons()
-                            new Swiper('.rooms-swiper', {
-                                spaceBetween: 24,
-                                slidesPerView: 'auto',
-                                speed: 1500,
-                                autoplay: {
-                                    delay: 3000,
-                                    disableOnInteraction: true,
-                                },
-                                navigation: {
-                                    nextEl: '.rooms-swiper-button-next',
-                                    prevEl: '.rooms-swiper-button-prev',
-                                },
-                                loop: true,
-                                breakpoints: {
-                                    540: {
-                                        slidesPerView: 1.5,
-                                    },
-                                    768: {
-                                        slidesPerView: 2,
-                                    },
-                                    1024: {
-                                        slidesPerView: 2.3,
-                                    },
-                                },
-                            })
-                        })
+                    {
+                        id: 2,
+                        image: 'assets/images/partner-logo-2.svg',
                     },
-                }
-            }
-
-            function facilitiesData() {
-                return {
-                    facilities: [
-                        {
-                            id: 1,
-                            image: 'assets/images/facilities-1.jpg',
-                            title: 'Swimming Pool',
-                        },
-                        {
-                            id: 2,
-                            image: 'assets/images/facilities-2.jpg',
-                            title: 'Luxurious Rooms',
-                        },
-                        {
-                            id: 3,
-                            image: 'assets/images/facilities-3.jpg',
-                            title: 'Meeting and Event Spaces',
-                        },
-                        {
-                            id: 4,
-                            image: 'assets/images/facilities-4.jpg',
-                            title: 'Dining and Culinary Options',
-                        },
-                        {
-                            id: 5,
-                            image: 'assets/images/facilities-1.jpg',
-                            title: 'Swimming Pool',
-                        },
-                        {
-                            id: 6,
-                            image: 'assets/images/facilities-2.jpg',
-                            title: 'Luxurious Rooms',
-                        },
-                        {
-                            id: 7,
-                            image: 'assets/images/facilities-3.jpg',
-                            title: 'Meeting and Event Spaces',
-                        },
-                        {
-                            id: 8,
-                            image: 'assets/images/facilities-4.jpg',
-                            title: 'Dining and Culinary Options',
-                        },
-                    ],
-
-                    initSwipers() {
-                        this.$nextTick(() => {
-                            lucide.createIcons()
-                            new Swiper('.facilities-swiper', {
-                                spaceBetween: 24,
-                                slidesPerView: 'auto',
-                                speed: 1500,
-                                autoplay: {
-                                    delay: 2500,
-                                    disableOnInteraction: true,
-                                },
-                                navigation: {
-                                    nextEl: '.facilities-swiper-button-next',
-                                    prevEl: '.facilities-swiper-button-prev',
-                                },
-                                centeredSlides: false,
-                                loop: true,
-                                breakpoints: {
-                                    540: {
-                                        slidesPerView: 1.5,
-                                    },
-                                    768: {
-                                        slidesPerView: 2,
-                                    },
-                                    1024: {
-                                        slidesPerView: 4,
-                                    },
-                                },
-                            })
-                        })
+                    {
+                        id: 3,
+                        image: 'assets/images/partner-logo-3.svg',
                     },
-                }
-            }
-
-            function testimonialData() {
-                return {
-                    testimonials: [
-                        {
-                            id: 1,
-                            message:
-                                'A flawless booking experience from start to finish! The resort was even more luxurious than I imagined, with stunning interiors and exceptional hospitality. Truly world-class service in every detail.',
-                            user_image: 'assets/images/testimonial-user.png',
-                            name: 'Olivia Martinez',
-                            location: 'Los Angeles',
-                        },
-                        {
-                            id: 2,
-                            message:
-                                'Thank you for your comment! We appreciate your engagement and are glad you found the information helpful. If you have any further questions or topics you’d like us to cover, feel free to let us know! It’s great to hear that you found our valuable.',
-                            user_image: 'https://i.pravatar.cc/80?img=12',
-                            name: 'Matthew Larson',
-                            location: 'San Francisco',
-                        },
-                    ],
-
-                    initSwipers() {
-                        this.$nextTick(() => {
-                            lucide.createIcons()
-                            new Swiper('.testimonial-swiper', {
-                                spaceBetween: 24,
-                                slidesPerView: 1,
-                                effect: 'fade',
-                                speed: 1500,
-                                autoplay: {
-                                    delay: 2500,
-                                    disableOnInteraction: true,
-                                },
-                                navigation: {
-                                    nextEl: '.testimonial-swiper-button-next',
-                                    prevEl: '.testimonial-swiper-button-prev',
-                                },
-                                loop: true,
-                            })
-                        })
+                    {
+                        id: 4,
+                        image: 'assets/images/partner-logo-4.svg',
                     },
-                }
+                    {
+                        id: 5,
+                        image: 'assets/images/partner-logo-5.svg',
+                    },
+                    {
+                        id: 6,
+                        image: 'assets/images/partner-logo-6.svg',
+                    },
+                    {
+                        id: 7,
+                        image: 'assets/images/partner-logo-7.svg',
+                    },
+                    {
+                        id: 8,
+                        image: 'assets/images/partner-logo-8.svg',
+                    },
+                    {
+                        id: 9,
+                        image: 'assets/images/partner-logo-9.svg',
+                    },
+                    {
+                        id: 10,
+                        image: 'assets/images/partner-logo-1.svg',
+                    },
+                    {
+                        id: 11,
+                        image: 'assets/images/partner-logo-2.svg',
+                    },
+                    {
+                        id: 12,
+                        image: 'assets/images/partner-logo-3.svg',
+                    },
+                ],
+
+                initSwipers() {
+                    this.$nextTick(() => {
+                        lucide.createIcons()
+                        new Swiper('.partner-swiper', {
+                            spaceBetween: 40,
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                            speed: 2000,
+                            autoplay: {
+                                delay: 1500,
+                                disableOnInteraction: true,
+                            },
+                            loop: true,
+                            breakpoints: {
+                                540: {
+                                    slidesPerView: 4,
+                                    centeredSlides: true,
+                                },
+                                768: {
+                                    slidesPerView: 5,
+                                    centeredSlides: true,
+                                },
+                                1280: {
+                                    slidesPerView: 7,
+                                    centeredSlides: true,
+                                    spaceBetween: 50,
+                                },
+                                1380: {
+                                    slidesPerView: 9,
+                                    centeredSlides: true,
+                                    spaceBetween: 70,
+                                },
+                            },
+                        })
+                    })
+                },
             }
+        }
 
-            function amenitiesData() {
-                return {
-                    amenities: [
-                        {
-                            id: 1,
-                            background_image: 'assets/images/swimming-pool.jpg',
-                            background_icon: 'assets/images/icon-circles.png',
-                            icon_primary: 'assets/images/icon-beach.svg',
-                            icon_light: 'assets/images/icon-beach-light.svg',
-                            title: 'Private pool & garden',
-                            description:
-                                'Enjoy serene moments of privacy with your own poolside escape.',
-                        },
-                        {
-                            id: 2,
-                            background_image: 'assets/images/banquet-halls.jpg',
-                            background_icon: 'assets/images/icon-rangoli.png',
-                            icon_primary: 'assets/images/icon-bedroom.svg',
-                            icon_light: 'assets/images/icon-bedroom-light.svg',
-                            title: 'Luxurious Interiors',
-                            description:
-                                'Experience elegance in every detail of our crafted designs.',
-                        },
-                        {
-                            id: 3,
-                            background_image:
-                                'assets/images/footer-gallery6.jpg',
-                            background_icon: 'assets/images/icon-tringle.png',
-                            icon_primary: 'assets/images/icon-living-area.svg',
-                            icon_light:
-                                'assets/images/icon-living-area-light.svg',
-                            title: 'Spacious Living Areas',
-                            description:
-                                'Relax in wide-open spaces built for comfort and togetherness.',
-                        },
-                        {
-                            id: 4,
-                            background_image: 'assets/images/blog-8.jpg',
-                            background_icon:
-                                'assets/images/icon-pear-circle.png',
-                            icon_primary:
-                                'assets/images/icon-entertainment.svg',
-                            icon_light:
-                                'assets/images/icon-entertainment-light.svg',
-                            title: 'Entertainment Space',
-                            description:
-                                'Unwind with modern amenities designed for leisure and fun.',
-                        },
-                    ],
-                }
+        function roomsData() {
+            return {
+                rooms: [
+                    {
+                        id: 1,
+                        image: 'assets/images/room-1.jpg',
+                        name: 'Deluxe Room',
+                        price: '$7,500',
+                        adults: 2,
+                        breakfast: 'included',
+                    },
+                    {
+                        id: 2,
+                        image: 'assets/images/room-2.jpg',
+                        name: 'Superior Room',
+                        price: '$9,000',
+                        adults: 2,
+                        breakfast: 'included',
+                    },
+                    {
+                        id: 3,
+                        image: 'assets/images/room-3.jpg',
+                        name: 'Premium Room',
+                        price: '$11,500',
+                        adults: 2,
+                        breakfast: 'included',
+                    },
+                    {
+                        id: 4,
+                        image: 'assets/images/room-4.jpg',
+                        name: 'Superior Room',
+                        price: '$9,000',
+                        adults: 2,
+                        breakfast: 'included',
+                    },
+                ],
+
+                initSwipers() {
+                    this.$nextTick(() => {
+                        lucide.createIcons()
+                        new Swiper('.rooms-swiper', {
+                            spaceBetween: 24,
+                            slidesPerView: 'auto',
+                            speed: 1500,
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: true,
+                            },
+                            navigation: {
+                                nextEl: '.rooms-swiper-button-next',
+                                prevEl: '.rooms-swiper-button-prev',
+                            },
+                            loop: true,
+                            breakpoints: {
+                                540: {
+                                    slidesPerView: 1.5,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 2.3,
+                                },
+                            },
+                        })
+                    })
+                },
             }
+        }
 
-            const headerGallery = () => {
-                return {
-                    images: [
-                        {
-                            id: 1,
-                            image: '/assets/images/footer-gallery1.jpg',
-                            title: 'Luxurious Rooms',
-                            width: '992',
-                            height: '744',
-                        },
-                        {
-                            id: 2,
-                            image: '/assets/images/footer-gallery2.jpg',
-                            title: 'Luxurious Rooms',
-                            width: '1038',
-                            height: '1359',
-                        },
-                        {
-                            id: 3,
-                            image: '/assets/images/footer-gallery3.jpg',
-                            title: 'Luxurious Rooms',
-                            width: '800',
-                            height: '600',
-                        },
-                        {
-                            id: 4,
-                            image: '/assets/images/footer-gallery4.jpg',
-                            title: 'Luxurious Rooms',
-                            width: '1020',
-                            height: '1360',
-                        },
-                        {
-                            id: 5,
-                            image: '/assets/images/footer-gallery5.jpg',
-                            title: 'Luxurious Rooms',
-                            width: '1160',
-                            height: '870',
-                        },
-                    ],
-                }
+        function facilitiesData() {
+            return {
+                facilities: [
+                    {
+                        id: 1,
+                        image: 'assets/images/facilities-1.jpg',
+                        title: 'Swimming Pool',
+                    },
+                    {
+                        id: 2,
+                        image: 'assets/images/facilities-2.jpg',
+                        title: 'Luxurious Rooms',
+                    },
+                    {
+                        id: 3,
+                        image: 'assets/images/facilities-3.jpg',
+                        title: 'Meeting and Event Spaces',
+                    },
+                    {
+                        id: 4,
+                        image: 'assets/images/facilities-4.jpg',
+                        title: 'Dining and Culinary Options',
+                    },
+                    {
+                        id: 5,
+                        image: 'assets/images/facilities-1.jpg',
+                        title: 'Swimming Pool',
+                    },
+                    {
+                        id: 6,
+                        image: 'assets/images/facilities-2.jpg',
+                        title: 'Luxurious Rooms',
+                    },
+                    {
+                        id: 7,
+                        image: 'assets/images/facilities-3.jpg',
+                        title: 'Meeting and Event Spaces',
+                    },
+                    {
+                        id: 8,
+                        image: 'assets/images/facilities-4.jpg',
+                        title: 'Dining and Culinary Options',
+                    },
+                ],
+
+                initSwipers() {
+                    this.$nextTick(() => {
+                        lucide.createIcons()
+                        new Swiper('.facilities-swiper', {
+                            spaceBetween: 24,
+                            slidesPerView: 'auto',
+                            speed: 1500,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: true,
+                            },
+                            navigation: {
+                                nextEl: '.facilities-swiper-button-next',
+                                prevEl: '.facilities-swiper-button-prev',
+                            },
+                            centeredSlides: false,
+                            loop: true,
+                            breakpoints: {
+                                540: {
+                                    slidesPerView: 1.5,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 4,
+                                },
+                            },
+                        })
+                    })
+                },
             }
+        }
 
-            function mainContent() {
-                return {
-                    headerMenu: false,
-                    videoModal: false,
-                }
+        function testimonialData() {
+            return {
+                testimonials: [
+                    {
+                        id: 1,
+                        message:
+                            'A flawless booking experience from start to finish! The resort was even more luxurious than I imagined, with stunning interiors and exceptional hospitality. Truly world-class service in every detail.',
+                        user_image: 'assets/images/testimonial-user.png',
+                        name: 'Olivia Martinez',
+                        location: 'Los Angeles',
+                    },
+                    {
+                        id: 2,
+                        message:
+                            'Thank you for your comment! We appreciate your engagement and are glad you found the information helpful. If you have any further questions or topics you’d like us to cover, feel free to let us know! It’s great to hear that you found our valuable.',
+                        user_image: 'https://i.pravatar.cc/80?img=12',
+                        name: 'Matthew Larson',
+                        location: 'San Francisco',
+                    },
+                ],
+
+                initSwipers() {
+                    this.$nextTick(() => {
+                        lucide.createIcons()
+                        new Swiper('.testimonial-swiper', {
+                            spaceBetween: 24,
+                            slidesPerView: 1,
+                            effect: 'fade',
+                            speed: 1500,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: true,
+                            },
+                            navigation: {
+                                nextEl: '.testimonial-swiper-button-next',
+                                prevEl: '.testimonial-swiper-button-prev',
+                            },
+                            loop: true,
+                        })
+                    })
+                },
             }
+        }
 
-            lucide.createIcons()
-        </script>
-        <script type="module">
-            import PhotoSwipeLightbox from '/assets/js/photoswipe-lightbox.esm.js'
-            const lightbox = new PhotoSwipeLightbox({
-                gallery: '#gallery',
-                children: 'a',
-                pswpModule: () => import('/assets/js/photoswipe.esm.js'),
-            })
-            lightbox.init()
-        </script>
+        function amenitiesData() {
+            return {
+                amenities: [
+                    {
+                        id: 1,
+                        background_image: 'assets/images/swimming-pool.jpg',
+                        background_icon: 'assets/images/icon-circles.png',
+                        icon_primary: 'assets/images/icon-beach.svg',
+                        icon_light: 'assets/images/icon-beach-light.svg',
+                        title: 'Private pool & garden',
+                        description:
+                            'Enjoy serene moments of privacy with your own poolside escape.',
+                    },
+                    {
+                        id: 2,
+                        background_image: 'assets/images/banquet-halls.jpg',
+                        background_icon: 'assets/images/icon-rangoli.png',
+                        icon_primary: 'assets/images/icon-bedroom.svg',
+                        icon_light: 'assets/images/icon-bedroom-light.svg',
+                        title: 'Luxurious Interiors',
+                        description:
+                            'Experience elegance in every detail of our crafted designs.',
+                    },
+                    {
+                        id: 3,
+                        background_image:
+                            'assets/images/footer-gallery6.jpg',
+                        background_icon: 'assets/images/icon-tringle.png',
+                        icon_primary: 'assets/images/icon-living-area.svg',
+                        icon_light:
+                            'assets/images/icon-living-area-light.svg',
+                        title: 'Spacious Living Areas',
+                        description:
+                            'Relax in wide-open spaces built for comfort and togetherness.',
+                    },
+                    {
+                        id: 4,
+                        background_image: 'assets/images/blog-8.jpg',
+                        background_icon:
+                            'assets/images/icon-pear-circle.png',
+                        icon_primary:
+                            'assets/images/icon-entertainment.svg',
+                        icon_light:
+                            'assets/images/icon-entertainment-light.svg',
+                        title: 'Entertainment Space',
+                        description:
+                            'Unwind with modern amenities designed for leisure and fun.',
+                    },
+                ],
+            }
+        }
 
-        <script type="application/ld+json">
+        const headerGallery = () => {
+            return {
+                images: [
+                    {
+                        id: 1,
+                        image: 'assets/images/footer-gallery1.jpg',
+                        title: 'Luxurious Rooms',
+                        width: '992',
+                        height: '744',
+                    },
+                    {
+                        id: 2,
+                        image: 'assets/images/footer-gallery2.jpg',
+                        title: 'Luxurious Rooms',
+                        width: '1038',
+                        height: '1359',
+                    },
+                    {
+                        id: 3,
+                        image: 'assets/images/footer-gallery3.jpg',
+                        title: 'Luxurious Rooms',
+                        width: '800',
+                        height: '600',
+                    },
+                    {
+                        id: 4,
+                        image: 'assets/images/footer-gallery4.jpg',
+                        title: 'Luxurious Rooms',
+                        width: '1020',
+                        height: '1360',
+                    },
+                    {
+                        id: 5,
+                        image: 'assets/images/footer-gallery5.jpg',
+                        title: 'Luxurious Rooms',
+                        width: '1160',
+                        height: '870',
+                    },
+                ],
+            }
+        }
+
+        function mainContent() {
+            return {
+                headerMenu: false,
+                videoModal: false,
+            }
+        }
+
+        lucide.createIcons()
+    </script>
+    <script type="module">
+        import PhotoSwipeLightbox from '/assets/js/photoswipe-lightbox.esm.js'
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('/assets/js/photoswipe.esm.js'),
+        })
+        lightbox.init()
+    </script>
+
+    <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
@@ -1673,5 +1255,6 @@
                 }
             }
         </script>
-    </body>
+</body>
+
 </html>
