@@ -152,6 +152,11 @@
     max-width: 100%;
     height: auto;
   }
+  .site-logo {
+  max-width: 160px;
+  object-fit: contain;
+  }
+
   button, input, select, optgroup, textarea, ::file-selector-button {
     font: inherit;
     font-feature-settings: inherit;
